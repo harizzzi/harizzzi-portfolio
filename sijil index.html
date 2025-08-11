@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sijil - Portfolio Muhammad Hariz Iqmal</title>
+  <link rel="stylesheet" href="sijil style.css" />
+</head>
+<body>
+  <header>
+    <h1>Muhammad Hariz Iqmal</h1>
+    <p>IT Student | IVC/KViP (Ipoh Vocasional College) | Computer System and Networks</p>
+    <nav>
+      <a href="index.html" class="btn">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2 class="section-title">KV LEVEL CERTIFICATE</h2>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          <strong>2025</strong> - I3DC Competition
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/i3dc.jpg" alt="Sijil I3DC Competition" class="clickable-img"/>
+        </div>
+      </div>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          KVSkills IT Network System Administration
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/kvskills.jpg" alt="Sijil KVSkills IT Network" class="clickable-img"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">NATIONAL LEVEL CERTIFICATE</h2>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          <strong>2024</strong> - National Android Application Development
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/apps.jpg" alt="Sijil Android Application" class="clickable-img"/>
+        </div>
+      </div>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          <strong>2024</strong> - National AI Quiz
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/quizai.jpg" alt="Sijil AI Quiz" class="clickable-img"/>
+        </div>
+      </div>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          <strong>2025</strong> - Hour of Code
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/hourofcode.jpg" alt="Sijil Hour of Code" class="clickable-img"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">CISCO CERTIFICATE</h2>
+      <div class="certificate-row">
+        <div class="certificate-text">Cisco Introduction to Cybersecurity</div>
+        <div class="certificate-img">
+          <img src="sijils/cybersecurity.jpg" alt="Sijil Cisco Cybersecurity" class="clickable-img"/>
+        </div>
+      </div>
+      <div class="certificate-row">
+        <div class="certificate-text">Hardware Basic</div>
+        <div class="certificate-img">
+          <img src="sijils/hardwarebasic.jpg" alt="Sijil Hardware Basic" class="clickable-img"/>
+        </div>
+      </div>
+      <div class="certificate-row">
+        <div class="certificate-text">Operating System Basic</div>
+        <div class="certificate-img">
+          <img src="sijils/osbasic.jpg" alt="Sijil Operating System Basic" class="clickable-img"/>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">STATE LEVEL CERTIFICATE</h2>
+      <div class="certificate-row">
+        <div class="certificate-text">
+          <strong>2024</strong> - AI Generative Poster Competition
+        </div>
+        <div class="certificate-img">
+          <img src="sijils/generatif.jpg" alt="Sijil AI Poster Competition" class="clickable-img"/>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="imgModal" class="modal">
+  <span class="close-btn" id="closeModal">&times;</span>
+  <img class="modal-content" id="modalImg" alt="Sijil besar" />
+  <div id="caption"></div>
+</div>
+
+  <footer>
+    <p>harizzi</p>
+  </footer>
+</body>
+
+<script>
+  const rows = document.querySelectorAll('.certificate-row');
+
+  function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    rows.forEach(row => {
+      const rowTop = row.getBoundingClientRect().top;
+
+      if (rowTop < triggerBottom) {
+        row.classList.add('visible');
+      } else {
+        row.classList.remove('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+</script>
+
+<script>
+  // Modal gambar
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.getElementById("closeModal");
+  const images = document.querySelectorAll(".clickable-img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.textContent = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Tutup modal jika klik luar gambar
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+</html>
