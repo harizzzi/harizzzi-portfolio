@@ -8,6 +8,43 @@ html {
     scroll-behavior: smooth;
 }
 
+nav{
+    height: 15vh;
+    width: 70vw;
+    min-width: 600px;
+    display: block;
+    align-items: left;
+    justify-content: right;
+    margin: right;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    float: right;
+    list-style-type: none;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: #ffffff;
+}
+a:hover:after{
+    width: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #000;
@@ -25,6 +62,7 @@ header {
     color: #fff;
     text-align: center;
 }
+
 .header-profile {
   display: flex;
   align-items: center;
@@ -33,12 +71,12 @@ header {
 }
 
 .profile-pic {
-  width: 173px;         
-  height: 173px;
+  width: 170px;         /* naikkan saiz */
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 8px #2196f3aa;
-  border: 2px solid #2196f3;
+  box-shadow: 0 0 8px #06cc16;
+  border: 2px solid #06cc16;
 
   opacity: 0;
   transform: translateY(20px);
@@ -63,7 +101,7 @@ header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #2196f3; /* Garis biru pemisah */
+    border-bottom: 2px solid #ffffff; /* Garis biru pemisah */
 }
 
 .btn {
@@ -72,14 +110,14 @@ header p {
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background: #2196f3;
+    background: #06cc16;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 .btn:hover {
-    background: #1976d2;
+    background: #06cc16;
 }
 
 .section {
@@ -104,7 +142,7 @@ header p {
 
 .title h2 {
     font-size: 3rem;
-    color: #2196f3; /* Biru untuk tajuk */
+    color: #06cc16; /* Biru untuk tajuk */
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -117,7 +155,7 @@ header p {
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: #2196f3;
+    background-color: #06cc16;
     border-radius: 2px;
 }
 
@@ -157,7 +195,7 @@ footer {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 30px;
-  background-color: #2196f3;
+  background-color: #06cc16;
   color: white;
   font-weight: 600;
   border-radius: 6px;
@@ -168,9 +206,6 @@ footer {
 }
 
 .cert-btn:hover {
-  background-color: #1976d2;
+  background-color: #06cc16;
 }
-
-
-
 
