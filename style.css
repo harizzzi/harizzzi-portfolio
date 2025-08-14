@@ -71,8 +71,8 @@ header {
 }
 
 .profile-pic {
-  width: 170px;         /* naikkan saiz */
-  height: 170px;
+  width: 140px;         
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 8px #06cc16;
@@ -101,7 +101,7 @@ header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ffffff; /* Garis biru pemisah */
+    border-bottom: 2px solid #ffffff; 
 }
 
 .btn {
@@ -142,7 +142,7 @@ header p {
 
 .title h2 {
     font-size: 3rem;
-    color: #06cc16; /* Biru untuk tajuk */
+    color: #06cc16; 
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -208,4 +208,5 @@ footer {
 .cert-btn:hover {
   background-color: #06cc16;
 }
+
 
