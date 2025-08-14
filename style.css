@@ -71,8 +71,8 @@ header {
 }
 
 .profile-pic {
-  width: 140px;         
-  height: 140px;
+  width: 150px;         
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 8px #06cc16;
@@ -208,5 +208,6 @@ footer {
 .cert-btn:hover {
   background-color: #06cc16;
 }
+
 
 
